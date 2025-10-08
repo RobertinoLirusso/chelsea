@@ -1,0 +1,10 @@
+.cover-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(135deg, #0838ff, #081a8f);
+    color: white;
+    text-align: center;
+}

@@ -1,0 +1,95 @@
+[
+  {
+    "match": "Chelsea vs Bayer Leverkusen",
+    "description": "On September 13, 2011, Chelsea kicked off their 2011/12 Champions League campaign with a solid 2-0 win over Bayer Leverkusen at Stamford Bridge. Goals from David Luiz in the 67th minute and Juan Mata in stoppage time marked the beginning of their journey to European glory.",
+    "match_image": "assets/img/match1.jpg",
+    "match_report": "https://www.uefa.com/uefachampionsleague/news/01f5-0ea2a71066a6-fe67e2bde6be-1000--luiz-and-mata-help-chelsea-beat-leverkusen/",
+    "stage": "Group stage, Matchday 1, Group E",
+    "goal_video": "assets/video/david_luiz_goal.mp4"
+  },
+  {
+    "match": "Valencia vs Chelsea",
+    "description": "On September 28, 2011, Chelsea were denied all three points at the Mestalla after a late penalty by Roberto Soldado secured a 1-1 draw for Valencia. Frank Lampard had given the visitors the lead earlier in the second half.",
+    "match_image": "assets/img/match2.jpg",
+    "match_report": "https://www.uefa.com/uefachampionsleague/match/2007593/",
+    "stage": "Group stage, Matchday 2, Group E",
+    "goal_video": "assets/video/lampard_goal.mp4"
+  },
+  {
+    "match": "Chelsea vs Genk",
+    "description": "On October 19, 2011, Chelsea dominated Genk with a 5-0 victory at Stamford Bridge. Goals from Raul Meireles, a brace by Fernando Torres, Branislav Ivanović, and Salomon Kalou secured the win.",
+    "match_image": "assets/img/match3.jpeg",
+    "match_report": "https://www.uefa.com/uefachampionsleague/match/2007610/",
+    "stage": "Group stage, Matchday 3, Group E"
+  },
+  {
+    "match": "Genk vs Chelsea",
+    "description": "On November 1, 2011, Chelsea were held to a 1-1 draw by Genk at the Cristal Arena. Ramires opened the scoring, but Jelle Vossen equalized for the hosts in the second half.",
+    "match_image": "assets/img/genk-vs-chelsea.jpg",
+    "match_report": "https://www.skysports.com/football/genk-vs-chelsea/249482",
+    "stage": "Group stage, Matchday 4, Group E"
+  },
+  {
+    "match": "Bayer Leverkusen vs Chelsea",
+    "description": "On November 23, 2011, Chelsea suffered a 2-1 defeat to Bayer Leverkusen at the BayArena. Didier Drogba gave Chelsea the lead, but goals from Eren Derdiyok and Manuel Friedrich turned the game around for the germans.",
+    "match_image": "assets/img/leverkusen-vs-chelsea.jpg",
+    "match_report": "https://www.espn.com/soccer/match/_/gameId/331174",
+    "stage": "Group stage, Matchday 5, Group E"
+  },
+  {
+    "match": "Chelsea vs Valencia",
+    "description": "On December 6, 2011, Chelsea secured a 3-0 win over Valencia at Stamford Bridge, ensuring progression to the knockout stages. Didier Drogba scored twice, and Ramires added another to seal the victory.",
+    "match_image": "assets/img/chelsea-vs-valencia.jpg",
+    "match_report": "https://www.skysports.com/football/chelsea-vs-valencia/249497",
+    "stage": "Group stage, Matchday 6, Group E"
+  },
+  {
+    "match": "Napoli vs Chelsea",
+    "description": "On February 21, 2012, Chelsea faced a 3-1 defeat against Napoli at the Stadio San Paolo. Goals from Ezequiel Lavezzi and Edinson Cavani gave the hosts a strong advantage, despite Juan Mata's opener for Chelsea.",
+    "match_image": "assets/img/napoli-vs-chelsea.jpg",
+    "match_report": "https://www.uefa.com/uefachampionsleague/match/2007677/",
+    "stage": "Round of 16, First Leg"
+  },
+  {
+    "match": "Chelsea vs Napoli",
+    "description": "On March 14, 2012, Chelsea completed a remarkable comeback at Stamford Bridge, defeating Napoli 4-1 after extra time. Goals from Didier Drogba, John Terry, Frank Lampard, and Branislav Ivanović overturned the first-leg deficit, advancing Chelsea to the quarter-finals.",
+    "match_image": "assets/img/chelsea-vs-napoli.jpg",
+    "match_report": "https://www.uefa.com/uefachampionsleague/match/2007678/",
+    "stage": "Round of 16, Second Leg"
+  },
+  {
+    "match": "Benfica vs Chelsea",
+    "description": "On March 27, 2012, Chelsea secured a 1-0 away victory against Benfica at the Estádio da Luz. Salomon Kalou's second-half goal gave the Blues a crucial advantage heading into the second leg.",
+    "match_image": "assets/img/benfica-vs-chelsea.jpg",
+    "match_report": "https://www.uefa.com/uefachampionsleague/match/2007683/",
+    "stage": "Quarter-finals, First Leg"
+  },
+  {
+    "match": "Chelsea vs Benfica",
+    "description": "On April 4, 2012, Chelsea advanced to the semi-finals with a 2-1 win over Benfica at Stamford Bridge. Goals from Frank Lampard and Raul Meireles ensured progression with a 3-1 aggregate score.",
+    "match_image": "assets/img/chelsea-vs-benfica.jpg",
+    "match_report": "https://www.uefa.com/uefachampionsleague/match/2007684/",
+    "stage": "Quarter-finals, Second Leg"
+  },
+  {
+    "match": "Chelsea vs Barcelona",
+    "description": "On April 18, 2012, Chelsea took a 1-0 lead in the semi-final first leg against Barcelona at Stamford Bridge. Didier Drogba's goal just before halftime made the difference in a tightly contested match.",
+    "match_image": "assets/img/chelsea-vs-barcelona.jpg",
+    "match_report": "https://www.uefa.com/uefachampionsleague/match/2007689/",
+    "stage": "Semi-finals, First Leg"
+  },
+  {
+    "match": "Barcelona vs Chelsea",
+    "description": "On April 24, 2012, Chelsea held Barcelona to a 2-2 draw at the Camp Nou, securing their place in the final with a 3-2 aggregate win. Goals from Ramires and Fernando Torres were crucial in overcoming the defending champions.",
+    "match_image": "assets/img/barcelona-vs-chelsea.jpg",
+    "match_report": "https://www.uefa.com/uefachampionsleague/match/2007690/",
+    "stage": "Semi-finals, Second Leg"
+  },
+  {
+    "match": "Bayern Munich vs Chelsea",
+    "description": "On May 19, 2012, Chelsea clinched their first Champions League title by defeating Bayern Munich in a dramatic final at the Allianz Arena. After a 1-1 draw in regular and extra time, the Blues triumphed 4-3 in the penalty shootout. Didier Drogba scored the equalizer and the winning penalty.",
+    "match_image": "assets/img/bayern-vs-chelsea.jpg",
+    "match_report": "https://www.uefa.com/uefachampionsleague/match/2007693/",
+    "stage": "Final"
+  }
+]

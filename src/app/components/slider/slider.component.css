@@ -1,0 +1,11 @@
+img {
+    max-height: 500px;
+    object-fit: cover;
+  }
+  
+
+a {
+  margin-top: 25px;
+  text-decoration: none;
+  color: black;
+}

@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './cover.component.css'
 })
 export class CoverComponent {
-
+  backgroundImage: string = 'assets/img/cover_photo.jpg';
 }

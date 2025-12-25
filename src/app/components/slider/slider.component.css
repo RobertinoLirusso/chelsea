@@ -1,11 +1,125 @@
-img {
-    max-height: 500px;
-    object-fit: cover;
-  }
-  
+.match-bg {
+  background-size: 110%; /* permite movimiento */
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
 
-a {
-  margin-top: 25px;
-  text-decoration: none;
-  color: black;
+  /* Movimiento suave */
+  animation: bgMove 20s ease-in-out infinite alternate;
+}
+
+/* Overlay animado */
+.match-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85); /* empieza oscuro */
+  z-index: 1;
+
+  animation: overlayFade 6s ease-in-out forwards;
+}
+
+/* Contenido arriba */
+.match-bg > *:not(.match-overlay) {
+  position: relative;
+  z-index: 2;
+}
+
+/* Movimiento tipo pan + zoom */
+@keyframes bgMove {
+  0% {
+    background-position: center center;
+    background-size: 110%;
+  }
+  100% {
+    background-position: center top;
+    background-size: 120%;
+  }
+}
+
+
+/* Links blancos */
+.match-bg a {
+  color: #ffffff;
+}
+
+/* Responsive Design */
+/* Mobile Styles */
+@media (max-width: 767px) {
+  /* Ajustes de fuente para mobile */
+  .match-bg h5 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .match-bg h2.display-5 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .match-bg p.lead {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Botón Watch Goal más pequeño */
+  .match-bg .text-success {
+    font-size: 1rem;
+  }
+
+  /* Flechas de navegación más pequeñas y mejor posicionadas */
+  .match-bg .fa-arrow-left,
+  .match-bg .fa-arrow-right {
+    font-size: 1.5rem !important;
+    margin: 0 15px;
+  }
+
+  /* Ajuste del contenedor de flechas */
+  .match-bg .d-flex.gap-5 {
+    gap: 2rem !important;
+    margin-bottom: 1rem;
+  }
+
+  /* Padding para el contenido */
+  .match-bg .row {
+    padding: 0 15px;
+  }
+
+  /* Loading y error states */
+  .container-fluid .text-center p {
+    font-size: 0.9rem;
+  }
+
+  .container-fluid .btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) and (max-width: 991px) {
+  .match-bg h2.display-5 {
+    font-size: 2.5rem;
+  }
+
+  .match-bg p.lead {
+    font-size: 1.1rem;
+  }
+
+  .match-bg .fa-arrow-left,
+  .match-bg .fa-arrow-right {
+    font-size: 2rem !important;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 992px) {
+  .match-bg h2.display-5 {
+    font-size: 3.5rem;
+  }
+
+  .match-bg p.lead {
+    font-size: 1.3rem;
+  }
 }

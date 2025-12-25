@@ -8,3 +8,122 @@
     color: white;
     text-align: center;
 }
+
+.match-bg {
+  background-size: 110%; /* permite movimiento */
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+
+  /* Movimiento suave */
+  animation: bgMove 20s ease-in-out infinite alternate;
+}
+
+/* Overlay fijo */
+.match-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9); /* opacidad fija para mantener la imagen sutil */
+  z-index: 1;
+}
+
+/* Contenido arriba */
+.match-bg > *:not(.match-overlay) {
+  position: relative;
+  z-index: 2;
+}
+
+/* Movimiento tipo pan + zoom */
+@keyframes bgMove {
+  0% {
+    background-position: center center;
+    background-size: 110%;
+  }
+  100% {
+    background-position: center top;
+    background-size: 120%;
+  }
+}
+
+
+/* Contenido del cover */
+.cover-content {
+  position: relative;
+  z-index: 2;
+}
+
+.cover-content h1,
+.cover-content p {
+  color: #ffffff;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.cover-content .btn {
+  background-color: #034694; /* Azul Chelsea */
+  border-color: #034694;
+  color: #ffffff;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.cover-content .btn:hover {
+  background-color: #0a3a7a; /* Azul más oscuro al hover */
+  border-color: #0a3a7a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Links blancos */
+.match-bg a {
+  color: #ffffff;
+}
+
+/* Responsive Design */
+/* Mobile Styles */
+@media (max-width: 767px) {
+  .cover-container {
+    padding: 20px;
+    height: 100vh;
+  }
+
+  .cover-content h1 {
+    font-size: 2rem !important; /* Más pequeño en mobile */
+    margin-bottom: 1rem;
+  }
+
+  .cover-content p {
+    font-size: 1rem !important; /* Texto más pequeño */
+    line-height: 1.4;
+    margin-bottom: 2rem;
+  }
+
+  .cover-content .btn {
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    border-radius: 25px;
+  }
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) and (max-width: 991px) {
+  .cover-content h1 {
+    font-size: 3rem;
+  }
+
+  .cover-content p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 992px) {
+  .cover-content h1 {
+    font-size: 4rem;
+  }
+
+  .cover-content p {
+    font-size: 1.4rem;
+  }
+}

@@ -1,113 +1,106 @@
+/* ===============================
+   COVER BASE
+================================ */
 .cover-container {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background: linear-gradient(135deg, #0838ff, #081a8f);
-    color: white;
-    text-align: center;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: white;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  position: relative;
+  overflow: hidden;
 }
 
+/* ===============================
+   MATCH BACKGROUND
+================================ */
 .match-bg {
-  background-size: 110%; /* permite movimiento */
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
+  width: 100%;
+  height: 100%;
 
-  /* Movimiento suave */
-  animation: bgMove 20s ease-in-out infinite alternate;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  position: absolute;
+  inset: 0;
 }
 
 /* Overlay fijo */
 .match-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.9); /* opacidad fija para mantener la imagen sutil */
+  background: rgba(0, 0, 0, 0.8);
   z-index: 1;
 }
 
-/* Contenido arriba */
-.match-bg > *:not(.match-overlay) {
-  position: relative;
-  z-index: 2;
-}
-
-/* Movimiento tipo pan + zoom */
-@keyframes bgMove {
-  0% {
-    background-position: center center;
-    background-size: 110%;
-  }
-  100% {
-    background-position: center top;
-    background-size: 120%;
-  }
-}
-
-
-/* Contenido del cover */
+/* ===============================
+   CONTENT LAYER
+================================ */
 .cover-content {
   position: relative;
   z-index: 2;
+
+  max-width: 900px;
+  padding: 0 1.5rem;
 }
 
 .cover-content h1,
 .cover-content p {
   color: #ffffff;
   font-weight: 600;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
+/* Button */
 .cover-content .btn {
-  background-color: #034694; /* Azul Chelsea */
+  background-color: #034694;
   border-color: #034694;
   color: #ffffff;
   font-weight: 600;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+
+  padding: 12px 28px;
+  font-size: 1rem;
+  border-radius: 30px;
+
   transition: all 0.3s ease;
 }
 
 .cover-content .btn:hover {
-  background-color: #0a3a7a; /* Azul más oscuro al hover */
+  background-color: #0a3a7a;
   border-color: #0a3a7a;
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
 }
 
-/* Links blancos */
-.match-bg a {
-  color: #ffffff;
+/* ===============================
+   MOBILE FIRST (DEFAULT)
+================================ */
+.cover-content h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
-/* Responsive Design */
-/* Mobile Styles */
-@media (max-width: 767px) {
-  .cover-container {
-    padding: 20px;
-    height: 100vh;
-  }
-
-  .cover-content h1 {
-    font-size: 2rem !important; /* Más pequeño en mobile */
-    margin-bottom: 1rem;
-  }
-
-  .cover-content p {
-    font-size: 1rem !important; /* Texto más pequeño */
-    line-height: 1.4;
-    margin-bottom: 2rem;
-  }
-
-  .cover-content .btn {
-    padding: 12px 24px;
-    font-size: 1.1rem;
-    border-radius: 25px;
-  }
+.cover-content p {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 2rem;
 }
 
-/* Tablet Styles */
-@media (min-width: 768px) and (max-width: 991px) {
+/* ===============================
+   TABLET
+================================ */
+@media (min-width: 768px) {
   .cover-content h1 {
     font-size: 3rem;
   }
@@ -117,13 +110,34 @@
   }
 }
 
-/* Desktop Styles */
+/* ===============================
+   DESKTOP (CINEMATIC EFFECT)
+================================ */
 @media (min-width: 992px) {
+  .match-bg {
+    background-size: 110%;
+    animation: bgMove 20s ease-in-out infinite alternate;
+  }
+
   .cover-content h1 {
     font-size: 4rem;
   }
 
   .cover-content p {
     font-size: 1.4rem;
+  }
+}
+
+/* ===============================
+   PAN + ZOOM (DESKTOP ONLY)
+================================ */
+@keyframes bgMove {
+  0% {
+    background-position: center center;
+    background-size: 110%;
+  }
+  100% {
+    background-position: center top;
+    background-size: 120%;
   }
 }

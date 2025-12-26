@@ -16,10 +16,8 @@ export class CoverComponent implements AfterViewInit, OnDestroy {
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngAfterViewInit(): void {
-    // Intentar reproducir el audio después de que la vista esté inicializada
-    setTimeout(() => {
-      this.tryPlayAudio();
-    }, 1000);
+    // Intentar reproducir el audio inmediatamente al cargar la página
+    this.tryPlayAudio();
 
     // Configurar listeners para videos
     this.setupVideoListeners();
@@ -34,12 +32,13 @@ export class CoverComponent implements AfterViewInit, OnDestroy {
     }
   }
 
-  // Escuchar cualquier interacción del usuario para activar el audio
+  // Escuchar cualquier interacción del usuario para activar el audio (como respaldo)
   @HostListener('document:click', ['$event'])
   @HostListener('document:keydown', ['$event'])
   @HostListener('document:touchstart', ['$event'])
   onUserInteraction(event: Event): void {
-    if (!this.audioStarted && this.backgroundAudio && !this.audioPausedByVideo) {
+    // Solo intentar iniciar si no se ha iniciado aún (por si el autoplay fue bloqueado)
+    if (!this.audioStarted && !this.audioPausedByVideo) {
       this.tryPlayAudio();
     }
   }

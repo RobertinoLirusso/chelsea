@@ -84,20 +84,51 @@
 }
 
 /* ===============================
-   VIDEO RESPONSIVENESS
+   VIDEO RESPONSIVENESS - 16:9 ASPECT RATIO
 ================================ */
-/* Video en móviles - ocupa toda la pantalla y está centrado */
+/* Video final en móviles - mantiene aspect ratio 16:9 landscape y centrado */
 @media (max-width: 767px) {
-  .match-bg video {
+  .final-video {
     width: 100vw !important;
-    height: 100vh !important;
+    height: 56.25vw !important; /* 9/16 * 100vw = 56.25vw para mantener 16:9 */
+    max-height: 100vh !important;
     object-fit: cover !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
   }
 }
 
-/* Video en desktop mantiene el comportamiento actual */
+/* Video modal en móviles - mantiene aspect ratio 16:9 y centrado */
+@media (max-width: 767px) {
+  .modal video {
+    width: 100% !important;
+    aspect-ratio: 16 / 9 !important;
+    height: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: 0 auto !important;
+  }
+
+  .modal .modal-content {
+    background: black !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 50vh !important;
+  }
+}
+
+/* Video final en desktop mantiene el comportamiento actual */
 @media (min-width: 768px) {
-  .match-bg video {
+  .final-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .modal video {
     width: 100%;
     height: 100%;
     object-fit: cover;

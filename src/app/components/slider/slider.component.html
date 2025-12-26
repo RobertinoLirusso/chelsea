@@ -75,7 +75,7 @@
 </div>
 
 <!-- Final Video Slide -->
-<div class="container-fluid d-flex flex-column justify-content-center align-items-center vh-100 vw-100 text-white bg-black"
+<div class="container-fluid position-relative d-flex justify-content-center align-items-center vh-100 vw-100 text-white bg-black"
      *ngIf="isShowingFinalSlide && !isLoading && !hasError">
 
   <video #finalVideo
@@ -83,7 +83,7 @@
          [src]="finalVideoUrl"
          muted
          autoplay
-         class="w-100 h-100 object-fit-cover"
+         class="final-video"
          (ended)="onVideoEnded()">
     Your browser does not support the video tag.
   </video>

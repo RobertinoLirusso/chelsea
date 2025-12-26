@@ -22,7 +22,7 @@
 }
 
 /* ===============================
-   MATCH BACKGROUND
+   MATCH BACKGROUND - MOBILE SLIDING
 ================================ */
 .match-bg {
   width: 100%;
@@ -30,10 +30,21 @@
 
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: 150% 100%;
+  animation: slideHorizontal 15s ease-in-out infinite alternate;
 
   position: absolute;
   inset: 0;
+}
+
+/* Animación de deslizamiento horizontal para móviles */
+@keyframes slideHorizontal {
+  0% {
+    background-position: left center;
+  }
+  100% {
+    background-position: right center;
+  }
 }
 
 /* Overlay fijo */
@@ -116,7 +127,7 @@
 @media (min-width: 992px) {
   .match-bg {
     background-size: 110%;
-    animation: bgMove 20s ease-in-out infinite alternate;
+    animation: bgMove 20s ease-in-out infinite alternate !important;
   }
 
   .cover-content h1 {

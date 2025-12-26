@@ -6,24 +6,6 @@ html, body {
     font-family: 'Roboto', sans-serif;
 }
 
-/* Mobile - Videos más pequeños pero full width */
-@media (max-width: 767px) {
-  video {
-    max-height: 30vh !important;
-    width: 100% !important;
-  }
-
-  /* Videos en modal mobile */
-  .modal video {
-    max-height: 35vh !important;
-    width: 100% !important;
-  }
-
-  /* Video final en slider mobile */
-  video#finalVideo {
-    max-height: 25vh !important;
-  }
-}
 /* Estilos globales para botones - Azul Chelsea */
 .btn {
   background-color: #034694 !important; /* Azul Chelsea */
